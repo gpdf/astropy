@@ -3165,6 +3165,7 @@ class Resource(Element, _IDProperty, _NameProperty, _UtypeProperty,
                 w.element("DESCRIPTION", self.description, wrap=True)
             for element_set in (self.coordinate_systems, self.params,
                                 self.infos, self.links, self.tables,
+                                self.groups,
                                 self.resources):
                 for element in element_set:
                     element.to_xml(w, **kwargs)
